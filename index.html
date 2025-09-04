@@ -127,19 +127,19 @@
     <h2>SELECIONAR</h2>
     </button>
     
+    <button type="button" class="cota" onclick="selecionarValor(20)">
+    <div class="cota-qtd">
+    +20
+    </div>
+    <h1>R$39,80</h1>
+    <h2>SELECIONAR</h2>
+    </button>
+    
     <button type="button" class="cota" onclick="selecionarValor(30)">
     <div class="cota-qtd">
     +30
     </div>
-    <h1>R$29,70</h1>
-    <h2>SELECIONAR</h2>
-    </button>
-    
-    <button type="button" class="cota" onclick="selecionarValor(40)">
-    <div class="cota-qtd">
-    +40
-    </div>
-    <h1>R$39,60</h1>
+    <h1>R$59,70</h1>
     <h2>SELECIONAR</h2>
     </button>
     
@@ -149,10 +149,10 @@
     
     <div class="cotas-one">
     
-    <button type="button" class="cota" onclick="selecionarValor(70)">
+    <button type="button" class="cota" onclick="selecionarValor(50)">
     <i class="bi bi-star-fill destaque"></i>
     <div class="cota-qtd">
-    +70
+    +50
     </div>
     <h1>R$69,30</h1>
     <h2>SELECIONAR</h2>
@@ -160,19 +160,19 @@
     
     
     
+    <button type="button" class="cota" onclick="selecionarValor(70)">
+    <div class="cota-qtd">
+    +70
+    </div>
+    <h1>R$139,30</h1>
+    <h2>SELECIONAR</h2>
+    </button>
+    
     <button type="button" class="cota" onclick="selecionarValor(100)">
     <div class="cota-qtd">
     +100
     </div>
-    <h1>R$99,00</h1>
-    <h2>SELECIONAR</h2>
-    </button>
-    
-    <button type="button" class="cota" onclick="selecionarValor(200)">
-    <div class="cota-qtd">
-    +200
-    </div>
-    <h1>R$198,00</h1>
+    <h1>R$199,00</h1>
     <h2>SELECIONAR</h2>
     </button>
     
@@ -283,17 +283,17 @@
     var valorAtual = parseInt(input.value);
     if (valorAtual < 100) {
     if (valorAtual === 0) {
-    input.value = 20;
+    input.value = 10;
     } else if (valorAtual === 20) {
-    input.value = 30;
+    input.value = 20;
     } else if (valorAtual === 30) {
-    input.value = 40;
-    } else if (valorAtual === 40) {
+    input.value = 30;
+    } else if (valorAtual === 50) {
+    input.value = 50;
+    } else if (valorAtual === 70) {
     input.value = 70;
     } else if (valorAtual === 100) {
     input.value = 100;
-    } else if (valorAtual === 200) {
-    input.value = 200;
     }
     }
     highlightButton();
@@ -302,17 +302,17 @@
     function decrementar() {
     var input = document.getElementById('numero');
     var valorAtual = parseInt(input.value);
-    if (valorAtual > 20) {
+    if (valorAtual > 10) {
     if (valorAtual === 100) {
     input.value = 100;
-    } else if (valorAtual === 70) {
-    input.value = 70;
-    } else if (valorAtual === 40) {
-    input.value = 40;
-    } else if (valorAtual === 40) {
+    } else if (valorAtual === 50) {
+    input.value = 50;
+    } else if (valorAtual === 30) {
     input.value = 30;
-    } else if (valorAtual === 20) {
+    } else if (valorAtual === 30) {
     input.value = 20;
+    } else if (valorAtual === 10) {
+    input.value = 10;
     }
     }
     highlightButton();
