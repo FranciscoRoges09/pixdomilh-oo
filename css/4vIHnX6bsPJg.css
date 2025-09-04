@@ -183,15 +183,15 @@ button.cota a:focus {
 }
 
 button.cota:hover {
-    background-color: #323232;
+    background-color: #F9BE02;
 }
 
 button.cota:focus {
-    background-color: #f6d72f;
+    background-color: #F9BE02;
 }
 
 .cota-selected {
-    background-color: #f6d72f !important;
+    background-color: #F9BE02 !important;
     color: white !important;
 }
 
