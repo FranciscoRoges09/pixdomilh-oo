@@ -276,119 +276,108 @@
     
     <!-- BOTÃO + E - -->
     <script>
-    const precoPorUnidade = 1.99;
-    
-    function incrementar() {
-    var input = document.getElementById('numero');
-    var valorAtual = parseInt(input.value);
-    if (valorAtual < 100) {
-    if (valorAtual === 0) {
-    input.value = 10;
-    } else if (valorAtual === 20) {
-    input.value = 20;
-    } else if (valorAtual === 30) {
-    input.value = 30;
-    } else if (valorAtual === 50) {
-    input.value = 50;
-    } else if (valorAtual === 70) {
-    input.value = 70;
-    } else if (valorAtual === 100) {
-    input.value = 100;
-    }
-    }
-    highlightButton();
-    }
-    
-    function decrementar() {
-    var input = document.getElementById('numero');
-    var valorAtual = parseInt(input.value);
-    if (valorAtual > 10) {
-    if (valorAtual === 100) {
-    input.value = 100;
-    } else if (valorAtual === 50) {
-    input.value = 50;
-    } else if (valorAtual === 30) {
-    input.value = 30;
-    } else if (valorAtual === 30) {
-    input.value = 20;
-    } else if (valorAtual === 10) {
-    input.value = 10;
-    }
-    }
-    highlightButton();
-    }
-    
-    function highlightButton() {
-    var input = document.getElementById('numero');
-    var valorAtual = parseInt(input.value);
-    var botoesCotas = document.querySelectorAll('.cota');
-    var botaoAdicionarCarrinho = document.getElementById('btn-adicionar-carrinho');
-    var valorTotal = document.getElementById('valor-total');
-    var link;
-    
-    botoesCotas.forEach(function (botao) {
+   const precoPorUnidade = 1.99;
+
+function incrementar() {
+  const input = document.getElementById('numero');
+  let valorAtual = parseInt(input.value);
+  
+  if (valorAtual < 100) {
+    if (valorAtual === 0) valorAtual = 10;
+    else if (valorAtual === 10) valorAtual = 20;
+    else if (valorAtual === 20) valorAtual = 30;
+    else if (valorAtual === 30) valorAtual = 50;
+    else if (valorAtual === 50) valorAtual = 70;
+    else if (valorAtual === 70) valorAtual = 100;
+    else valorAtual += 10; // Fallback for custom values
+    selecionarValor(valorAtual);
+  }
+}
+
+function decrementar() {
+  const input = document.getElementById('numero');
+  let valorAtual = parseInt(input.value);
+
+  if (valorAtual > 10) {
+    if (valorAtual === 100) valorAtual = 70;
+    else if (valorAtual === 70) valorAtual = 50;
+    else if (valorAtual === 50) valorAtual = 30;
+    else if (valorAtual === 30) valorAtual = 20;
+    else if (valorAtual === 20) valorAtual = 10;
+    else valorAtual -= 10; // Fallback
+    selecionarValor(valorAtual);
+  }
+}
+
+function highlightButton() {
+  const input = document.getElementById('numero');
+  const valorAtual = parseInt(input.value) || 0; // Use 0 if the value is not a number
+  const botoesCotas = document.querySelectorAll('.cota');
+  const botaoAdicionarCarrinho = document.getElementById('btn-adicionar-carrinho');
+  const valorTotal = document.getElementById('valor-total');
+  let link = null; // Initialize link
+
+  botoesCotas.forEach(function (botao) {
     botao.classList.remove('cota-selected');
-    var valorBotao = parseInt(botao.querySelector('.cota-qtd').innerText.trim());
+    const valorBotao = parseInt(botao.querySelector('.cota-qtd').innerText.trim());
     if (valorBotao === valorAtual) {
-    botao.classList.add('cota-selected');
-    switch (valorBotao) {
-    case 10:
-     link = "https://seguropagamentos.com.br/cotaspix";
-                        break;
-                    case 20:
-                        link = "https://seguropagamentos.com.br/cotas30";
-                        break;
-                    case 30:
-                        link = "https://seguropagamentos.com.br/40cotasx";
-                        break;
-                    case 50:
-                        link = "https://seguropagamentos.com.br/70cotasx";
-                        break;
-                    case 70:
-                        link = "https://seguropagamentos.com.br/100cotasss";
-                        break;
-                            case 100:
-                        link = "https://seguropagamentos.com.br/200cotasx";
-                        break;
-    
-    default:
-    break;
+      botao.classList.add('cota-selected');
+      switch (valorBotao) {
+        case 10: link = "https://seguropagamentos.com.br/cotaspix"; break;
+        case 20: link = "https://seguropagamentos.com.br/cotas30"; break;
+        case 30: link = "https://seguropagamentos.com.br/40cotasx"; break;
+        case 50: link = "https://seguropagamentos.com.br/70cotasx"; break;
+        case 70: link = "https://seguropagamentos.com.br/100cotasss"; break;
+        case 100: link = "https://seguropagamentos.com.br/200cotasx"; break;
+        default: break;
+      }
     }
-    botaoAdicionarCarrinho.setAttribute('onclick', 'adicionarAoCarrinho("' + link + '")');
-    }
-    });
-    
+  });
+
+  if (botaoAdicionarCarrinho) {
     if (valorAtual === 0) {
-    botaoAdicionarCarrinho.disabled = true;
-    valorTotal.innerText = "R$ 0,00";
+      botaoAdicionarCarrinho.disabled = true;
     } else {
-    botaoAdicionarCarrinho.disabled = false;
+      botaoAdicionarCarrinho.disabled = false;
+      if (link) {
+        botaoAdicionarCarrinho.setAttribute('onclick', 'adicionarAoCarrinho("' + link + '")');
+      }
+    }
+  }
+
+  if (valorTotal) {
     valorTotal.innerText = "R$ " + (valorAtual * precoPorUnidade).toFixed(2).replace('.', ',');
-    }
-    }
-    
-    function selecionarValor(valor) {
-    var input = document.getElementById('numero');
+  }
+}
+
+function selecionarValor(valor) {
+  const input = document.getElementById('numero');
+  if (input) {
     input.value = valor;
     highlightButton();
-    }
-    
-    function adicionarAoCarrinho(link) {
-    window.location.href = link + window.location.search;
-    }
-    
-    document.getElementById('numero').addEventListener('input', function () {
-    this.value = this.value.replace(/[^0-9]/g, ''); // Apenas números permitidos
-    var valor = parseInt(this.value);
+  }
+}
+
+function adicionarAoCarrinho(link) {
+  window.location.href = link + window.location.search;
+}
+
+// Add an event listener to the input field if it exists
+const numeroInput = document.getElementById('numero');
+if (numeroInput) {
+  numeroInput.addEventListener('input', function () {
+    this.value = this.value.replace(/[^0-9]/g, '');
+    const valor = parseInt(this.value);
     if (valor > 500) {
-    this.value = 500;
-    } else if (valor < 10) {
-    this.value = 0;
+      this.value = 500;
+    } else if (valor < 10 && valor > 0) {
+        this.value = 10;
     } else if (valor % 10 !== 0) {
-    this.value = Math.floor(valor / 10) * 10;
+      this.value = Math.floor(valor / 10) * 10;
     }
     highlightButton();
-    });
+  });
+}
     
     </script>
     
