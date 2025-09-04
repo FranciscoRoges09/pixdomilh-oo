@@ -912,12 +912,13 @@ H1.assista-video-novo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(245,158,11);
-    background: -moz-linear-gradient(180deg, rgba(245,158,11,1) 0%, rgba(191,36,26,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(245,158,11,1) 0%, rgba(191,36,26,1) 100%);
-    background: linear-gradient(180deg, rgba(245,158,11,1) 0%, rgba(191,36,26,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59e0b",endColorstr="#bf241a",GradientType=1);
+    background: #F6D72F;
+    background: -moz-linear-gradient(180deg, #F6D72F 0%, #037026 100%);
+    background: -webkit-linear-gradient(180deg, #F6D72F 0%, #037026 100%);
+    background: linear-gradient(180deg, #F6D72F 0%, #037026 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F6D72F",endColorstr="#037026",GradientType=1);
 }
+
 
 .card-hospital-image {
     width: 40%;
