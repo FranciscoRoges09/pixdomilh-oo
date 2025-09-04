@@ -912,11 +912,7 @@ H1.assista-video-novo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #F6D72F;
-    background: -moz-linear-gradient(180deg, #F6D72F 0%, #037026 100%);
-    background: -webkit-linear-gradient(180deg, #F6D72F 0%, #037026 100%);
-    background: linear-gradient(180deg, #F6D72F 0%, #037026 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F6D72F",endColorstr="#037026",GradientType=1);
+    background: #037026;
 }
 
 
@@ -951,11 +947,7 @@ H1.assista-video-novo {
 
 .card-hospital-bg-azul {
     margin-top: 20px;
-    background: rgb(249, 228, 1);
-       background: -moz-linear-gradient(180deg, rgb(253, 232, 1) 0%, rgb(0, 0, 0) 100%);
-background: -webkit-linear-gradient(180deg, rgb(248, 208, 4) 0%, rgb(0, 0, 0) 100%);
-background: linear-gradient(180deg, rgb(254, 216, 0) 0%, rgb(0, 0, 0) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff602",endColorstr="#2563eb",GradientType=1);
+    background: #037026;
 }
 
 
