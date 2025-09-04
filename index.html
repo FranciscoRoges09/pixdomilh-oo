@@ -83,7 +83,7 @@
     </div>
     
     
-    <script>
+   <script>
     function atualizarContador() {
     // Obter o elemento span pelo ID
     var span = document.getElementById('contador');
@@ -91,12 +91,25 @@
     // Obter a data atual
     var hoje = new Date();
     
-    // Calcular o número de dias restantes até o próximo domingo (0 para domingo, 1 para segunda-feira, ..., 6 para sábado)
-    var diasRestantes = 7 - hoje.getDay();
+    // Obter o dia da semana atual (0 = domingo, 1 = segunda, ..., 5 = sexta)
+    var diaDaSemana = hoje.getDay();
     
-    // Se for domingo, reinicie o contador para 7 dias
-    if (diasRestantes === 0) {
+    // O dia alvo é a sexta-feira, que corresponde ao número 5
+    var diaAlvo = 5;
+    
+    var diasRestantes;
+    
+    // Se o dia atual for sexta-feira (5), o próximo alvo é daqui a 7 dias
+    if (diaDaSemana === diaAlvo) {
     diasRestantes = 7;
+    } 
+    // Se o dia atual for menor que sexta, a diferença é direta
+    else if (diaDaSemana < diaAlvo) {
+    diasRestantes = diaAlvo - diaDaSemana;
+    } 
+    // Se o dia atual for maior que sexta, a diferença é até o final da semana + os dias até sexta
+    else {
+    diasRestantes = 7 - (diaDaSemana - diaAlvo);
     }
     
     // Atualizar o conteúdo do span
@@ -108,7 +121,7 @@
     
     // Chamar a função para atualizar o contador a cada 24 horas
     setInterval(atualizarContador, 24 * 60 * 60 * 1000);
-    </script>
+</script>
     
     <div class="container-principal">
     
