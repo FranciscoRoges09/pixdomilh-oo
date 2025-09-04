@@ -242,7 +242,7 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
-    /* Título e Botão de Ver Ganhadores */
+    /* Título Principal */
     .premios-header {
         display: flex;
         justify-content: space-between;
@@ -262,16 +262,6 @@
         color: #28a745;
         margin-right: 8px;
     }
-    
-    .btn-ganhadores {
-        background-color: transparent;
-        border: 1px solid #ffc107;
-        color: #ffc107;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 14px;
-        cursor: pointer;
-    }
 
     /* Sub-título e Cotação */
     .premios-info {
@@ -286,7 +276,7 @@
         font-size: 14px;
         font-weight: normal;
     }
-    
+
     /* Botões de Filtro */
     .premios-filtros {
         display: flex;
@@ -342,28 +332,6 @@
         font-weight: bold;
         margin: 0;
     }
-    
-    .premio-acoes {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .premio-acoes .btn-reacao, .premio-acoes .btn-video {
-        background-color: #4a4a4a;
-        color: #fff;
-        padding: 6px 12px;
-        border-radius: 20px;
-        font-size: 12px;
-    }
-    .premio-acoes .btn-video {
-        background-color: #ffc107;
-        color: #1a1a1a;
-    }
-    
-    .premio-acoes .fa-play {
-        margin-left: 4px;
-    }
 
     .premio-details {
         display: flex;
@@ -378,8 +346,17 @@
         align-items: center;
         gap: 8px;
     }
-    
-    .premio-status {
+
+    .premio-status-disponivel {
+        background-color: #037026; /* Cor verde para "disponível" */
+        color: #eee;
+        padding: 4px 8px;
+        border-radius: 16px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .premio-status-comprado {
         background-color: #444;
         color: #eee;
         padding: 4px 8px;
@@ -387,7 +364,7 @@
         font-size: 12px;
         font-weight: bold;
     }
-    
+
     .ver-mais-cotas {
         text-align: center;
         margin-top: 24px;
@@ -399,16 +376,15 @@
     .ver-mais-cotas .fa-plus {
         margin-right: 8px;
     }
-    
+
     /* Ícones */
     .fa-trophy {
         color: #ffc107;
     }
-
-    .fa-key {
+    
+    .fa-key, .fa-lock {
         color: #999;
     }
-    
 </style>
 
 <div class="premios-container">
@@ -417,7 +393,6 @@
         <h3>
             <i class="fa-solid fa-trophy header-icone"></i> Títulos premiados
         </h3>
-        <button class="btn-ganhadores">Ver ganhadores</button>
     </div>
 
     <div class="premios-info">
@@ -437,21 +412,13 @@
                 <div class="premio-valor">
                     <h1>R$ 5.000,00</h1>
                 </div>
-                <div class="premio-acoes">
-                    <span class="btn-reacao">Reação</span>
-                    <i class="fa-solid fa-play btn-video"></i>
-                </div>
+                <div class="premio-status-disponivel">Disponível</div>
             </div>
             <div class="premio-details">
                 <div class="premio-details-left">
-                    <i class="fa-solid fa-key"></i>
+                    <i class="fa-solid fa-lock"></i>
                     <span>6271813</span>
                 </div>
-                <div class="premio-status">Comprado</div>
-            </div>
-            <div class="premio-details">
-                <span>30/08/2025 15:30</span>
-                <span>Janete P****</span>
             </div>
         </div>
 
@@ -460,21 +427,13 @@
                 <div class="premio-valor">
                     <h1>R$ 1.000,00</h1>
                 </div>
-                <div class="premio-acoes">
-                    <span class="btn-reacao">Reação</span>
-                    <i class="fa-solid fa-play btn-video"></i>
-                </div>
+                <div class="premio-status-disponivel">Disponível</div>
             </div>
             <div class="premio-details">
                 <div class="premio-details-left">
-                    <i class="fa-solid fa-key"></i>
+                    <i class="fa-solid fa-lock"></i>
                     <span>6270892</span>
                 </div>
-                <div class="premio-status">Comprado</div>
-            </div>
-            <div class="premio-details">
-                <span>31/08/2025 07:42</span>
-                <span>Valquiria d*****</span>
             </div>
         </div>
 
@@ -483,21 +442,13 @@
                 <div class="premio-valor">
                     <h1>R$ 500,00</h1>
                 </div>
-                <div class="premio-acoes">
-                    <span class="btn-reacao">Reação</span>
-                    <i class="fa-solid fa-play btn-video"></i>
-                </div>
+                <div class="premio-status-disponivel">Disponível</div>
             </div>
             <div class="premio-details">
                 <div class="premio-details-left">
-                    <i class="fa-solid fa-key"></i>
+                    <i class="fa-solid fa-lock"></i>
                     <span>6268436</span>
                 </div>
-                <div class="premio-status">Comprado</div>
-            </div>
-            <div class="premio-details">
-                <span>01/09/2025 10:13</span>
-                <span>Joseny S*****</span>
             </div>
         </div>
         
@@ -506,21 +457,13 @@
                 <div class="premio-valor">
                     <h1>R$ 500,00</h1>
                 </div>
-                <div class="premio-acoes">
-                    <span class="btn-reacao">Reação</span>
-                    <i class="fa-solid fa-play btn-video"></i>
-                </div>
+                <div class="premio-status-disponivel">Disponível</div>
             </div>
             <div class="premio-details">
                 <div class="premio-details-left">
-                    <i class="fa-solid fa-key"></i>
+                    <i class="fa-solid fa-lock"></i>
                     <span>6268743</span>
                 </div>
-                <div class="premio-status">Comprado</div>
-            </div>
-            <div class="premio-details">
-                <span>01/09/2025 11:31</span>
-                <span>Daniela S******</span>
             </div>
         </div>
 
@@ -529,24 +472,175 @@
                 <div class="premio-valor">
                     <h1>R$ 500,00</h1>
                 </div>
-                <div class="premio-acoes">
-                    <span class="btn-reacao">Reação</span>
-                    <i class="fa-solid fa-play btn-video"></i>
-                </div>
+                <div class="premio-status-disponivel">Disponível</div>
             </div>
             <div class="premio-details">
                 <div class="premio-details-left">
-                    <i class="fa-solid fa-key"></i>
+                    <i class="fa-solid fa-lock"></i>
                     <span>6269664</span>
                 </div>
-                <div class="premio-status">Comprado</div>
-            </div>
-            <div class="premio-details">
-                <span>01/09/2025 20:59</span>
-                <span>Flavia t*******</span>
             </div>
         </div>
 
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 5.000,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6272580</span>
+                </div>
+                <span>Janete P****</span>
+            </div>
+            <div class="premio-details">
+                <span>02/09/2025 10:15</span>
+            </div>
+        </div>
+
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 1.000,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6273421</span>
+                </div>
+                <span>Valquiria d*****</span>
+            </div>
+            <div class="premio-details">
+                <span>02/09/2025 11:30</span>
+            </div>
+        </div>
+
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 500,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6274198</span>
+                </div>
+                <span>Joseny S*****</span>
+            </div>
+            <div class="premio-details">
+                <span>02/09/2025 12:45</span>
+            </div>
+        </div>
+        
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 500,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6275005</span>
+                </div>
+                <span>Daniela S******</span>
+            </div>
+            <div class="premio-details">
+                <span>02/09/2025 14:00</span>
+            </div>
+        </div>
+
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 500,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6276112</span>
+                </div>
+                <span>Flavia t*******</span>
+            </div>
+            <div class="premio-details">
+                <span>02/09/2025 15:30</span>
+            </div>
+        </div>
+
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 10.000,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6277254</span>
+                </div>
+                <span>Alexandre G*****</span>
+            </div>
+            <div class="premio-details">
+                <span>03/09/2025 08:00</span>
+            </div>
+        </div>
+        
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 2.500,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6278019</span>
+                </div>
+                <span>Isabela M*****</span>
+            </div>
+            <div class="premio-details">
+                <span>03/09/2025 09:30</span>
+            </div>
+        </div>
+        
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 500,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6279134</span>
+                </div>
+                <span>Rodrigo V*****</span>
+            </div>
+            <div class="premio-details">
+                <span>03/09/2025 11:00</span>
+            </div>
+        </div>
+
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 1.000,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6280221</span>
+                </div>
+                <span>Camila A*****</span>
+            </div>
+            <div class="premio-details">
+                <span>03/09/2025 13:45</span>
+            </div>
+        </div>
+        
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor"><h1>R$ 500,00</h1></div>
+                <div class="premio-status-comprado">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i><span>6281546</span>
+                </div>
+                <span>Fernanda B*****</span>
+            </div>
+            <div class="premio-details">
+                <span>03/09/2025 16:20</span>
+            </div>
+        </div>
     </div>
 
     <div class="ver-mais-cotas">
