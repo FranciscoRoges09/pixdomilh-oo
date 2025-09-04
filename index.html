@@ -229,7 +229,331 @@
     <p>Pix do Milhão Privilégios, um programa que enriquece sua vida com acesso � saúde, alimentação, transporte e mais. Com cada compra, acumule pontos para trocar por consultas médicas, receber cashback, e utilizar serviços de telefonia e apps de transporte e alimentação. Eleve sua qualidade de vida e desfrute de mais conveniência e economia!</p>
     </div>
     </div>
+    <style>
+    /* Estilos Gerais do Contêiner */
+    .premios-container {
+        font-family: Arial, sans-serif;
+        background-color: #1a1a1a;
+        color: #f0f0f0;
+        border-radius: 12px;
+        padding: 24px;
+        max-width: 800px;
+        margin: 40px auto;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Título e Botão de Ver Ganhadores */
+    .premios-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid #333;
+    }
+
+    .premios-header h3 {
+        color: #fff;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .premios-header .header-icone {
+        color: #28a745;
+        margin-right: 8px;
+    }
     
+    .btn-ganhadores {
+        background-color: transparent;
+        border: 1px solid #ffc107;
+        color: #ffc107;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    /* Sub-título e Cotação */
+    .premios-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .premios-info h4 {
+        color: #999;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+    /* Botões de Filtro */
+    .premios-filtros {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+        background-color: #2e2e2e;
+        border-radius: 8px;
+        padding: 4px;
+    }
+
+    .btn-filtro {
+        flex: 1;
+        background-color: transparent;
+        color: #fff;
+        border: none;
+        padding: 10px 0;
+        border-radius: 6px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+    .btn-filtro.active {
+        background-color: #ffc107;
+        color: #1a1a1a;
+        font-weight: bold;
+    }
+
+    /* Lista de Títulos */
+    .premios-lista {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .premio-item {
+        background-color: #2a2a2a;
+        padding: 16px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .premio-valor-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+    }
+
+    .premio-valor h1 {
+        font-size: 24px;
+        color: #fff;
+        font-weight: bold;
+        margin: 0;
+    }
+    
+    .premio-acoes {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .premio-acoes .btn-reacao, .premio-acoes .btn-video {
+        background-color: #4a4a4a;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+    .premio-acoes .btn-video {
+        background-color: #ffc107;
+        color: #1a1a1a;
+    }
+    
+    .premio-acoes .fa-play {
+        margin-left: 4px;
+    }
+
+    .premio-details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        color: #999;
+    }
+
+    .premio-details-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    
+    .premio-status {
+        background-color: #444;
+        color: #eee;
+        padding: 4px 8px;
+        border-radius: 16px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    
+    .ver-mais-cotas {
+        text-align: center;
+        margin-top: 24px;
+        color: #999;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .ver-mais-cotas .fa-plus {
+        margin-right: 8px;
+    }
+    
+    /* Ícones */
+    .fa-trophy {
+        color: #ffc107;
+    }
+
+    .fa-key {
+        color: #999;
+    }
+    
+</style>
+
+<div class="premios-container">
+
+    <div class="premios-header">
+        <h3>
+            <i class="fa-solid fa-trophy header-icone"></i> Títulos premiados
+        </h3>
+        <button class="btn-ganhadores">Ver ganhadores</button>
+    </div>
+
+    <div class="premios-info">
+        <h4>5327 disponíveis/10000 cotas</h4>
+    </div>
+
+    <div class="premios-filtros">
+        <button class="btn-filtro active">Todas</button>
+        <button class="btn-filtro">Disponíveis</button>
+        <button class="btn-filtro">Compradas</button>
+    </div>
+
+    <div class="premios-lista">
+
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor">
+                    <h1>R$ 5.000,00</h1>
+                </div>
+                <div class="premio-acoes">
+                    <span class="btn-reacao">Reação</span>
+                    <i class="fa-solid fa-play btn-video"></i>
+                </div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i>
+                    <span>6271813</span>
+                </div>
+                <div class="premio-status">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <span>30/08/2025 15:30</span>
+                <span>Janete P****</span>
+            </div>
+        </div>
+
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor">
+                    <h1>R$ 1.000,00</h1>
+                </div>
+                <div class="premio-acoes">
+                    <span class="btn-reacao">Reação</span>
+                    <i class="fa-solid fa-play btn-video"></i>
+                </div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i>
+                    <span>6270892</span>
+                </div>
+                <div class="premio-status">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <span>31/08/2025 07:42</span>
+                <span>Valquiria d*****</span>
+            </div>
+        </div>
+
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor">
+                    <h1>R$ 500,00</h1>
+                </div>
+                <div class="premio-acoes">
+                    <span class="btn-reacao">Reação</span>
+                    <i class="fa-solid fa-play btn-video"></i>
+                </div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i>
+                    <span>6268436</span>
+                </div>
+                <div class="premio-status">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <span>01/09/2025 10:13</span>
+                <span>Joseny S*****</span>
+            </div>
+        </div>
+        
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor">
+                    <h1>R$ 500,00</h1>
+                </div>
+                <div class="premio-acoes">
+                    <span class="btn-reacao">Reação</span>
+                    <i class="fa-solid fa-play btn-video"></i>
+                </div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i>
+                    <span>6268743</span>
+                </div>
+                <div class="premio-status">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <span>01/09/2025 11:31</span>
+                <span>Daniela S******</span>
+            </div>
+        </div>
+
+        <div class="premio-item">
+            <div class="premio-valor-info">
+                <div class="premio-valor">
+                    <h1>R$ 500,00</h1>
+                </div>
+                <div class="premio-acoes">
+                    <span class="btn-reacao">Reação</span>
+                    <i class="fa-solid fa-play btn-video"></i>
+                </div>
+            </div>
+            <div class="premio-details">
+                <div class="premio-details-left">
+                    <i class="fa-solid fa-key"></i>
+                    <span>6269664</span>
+                </div>
+                <div class="premio-status">Comprado</div>
+            </div>
+            <div class="premio-details">
+                <span>01/09/2025 20:59</span>
+                <span>Flavia t*******</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ver-mais-cotas">
+        <i class="fa-solid fa-plus"></i> Ver mais cotas
+    </div>
+
+</div>
     </div>
     </div>
     
