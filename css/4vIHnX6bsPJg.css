@@ -912,10 +912,10 @@ H1.assista-video-novo {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: lab(72.16% 23.5 75.23);
-    background: -moz-linear-gradient(180deg, rgba(245,158,11,1) 0%, rgba(191,36,26,1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(245,158,11,1) 0%, rgba(191,36,26,1) 100%);
-    background: linear-gradient(180deg, rgba(245,158,11,1) 0%, rgba(191,36,26,1) 100%);
+    background: rgb(3,112,38);
+    background: -moz-linear-gradient(180deg, rgba(3,112,38) 0%, rgba(3,112,38) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(3,112,38) 0%, rgba(3,112,38) 100%);
+    background: linear-gradient(180deg, rgba(3,112,38) 0%, rgba(3,112,38) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59e0b",endColorstr="#bf241a",GradientType=1);
 }
 
@@ -950,10 +950,10 @@ H1.assista-video-novo {
 
 .card-hospital-bg-azul {
     margin-top: 20px;
-    background: rgb(249, 228, 1);
-       background: -moz-linear-gradient(180deg, rgb(253, 232, 1) 0%, rgb(0, 0, 0) 100%);
-background: -webkit-linear-gradient(180deg, rgb(248, 208, 4) 0%, rgb(0, 0, 0) 100%);
-background: linear-gradient(180deg, rgb(254, 216, 0) 0%, rgb(0, 0, 0) 100%);
+     background: rgb(3,112,38);
+    background: -moz-linear-gradient(180deg, rgba(3,112,38) 0%, rgba(3,112,38) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(3,112,38) 0%, rgba(3,112,38) 100%);
+    background: linear-gradient(180deg, rgba(3,112,38) 0%, rgba(3,112,38) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff602",endColorstr="#2563eb",GradientType=1);
 }
 
@@ -969,9 +969,9 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff602",endCo
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        background: -moz-linear-gradient(180deg, rgb(253, 232, 1) 0%, rgb(0, 0, 0) 100%);
-background: -webkit-linear-gradient(180deg, rgb(248, 208, 4) 0%, rgb(0, 0, 0) 100%);
-background: linear-gradient(180deg, rgb(254, 216, 0) 0%, rgb(0, 0, 0) 100%);
+        background: -moz-linear-gradient(180deg, rgb(3,112,38) 0%, rgb(3,112,38) 100%);
+background: -webkit-linear-gradient(180deg, rgb(3,112,38) 0%, rgb(3,112,38) 100%);
+background: linear-gradient(180deg, rgb(3,112,38) 0%, rgb(3,112,38) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff602",endColorstr="#2563eb",GradientType=1);
     }
     
@@ -1004,11 +1004,11 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff602",endCo
 
     .card-hospital-bg-azul {
         margin-top: 20px;
-       background: rgb(255, 208, 0);
-     background: rgb(249, 228, 1);
-       background: -moz-linear-gradient(180deg, rgb(253, 232, 1) 0%, rgb(0, 0, 0) 100%);
-background: -webkit-linear-gradient(180deg, rgb(248, 208, 4) 0%, rgb(0, 0, 0) 100%);
-background: linear-gradient(180deg, rgb(254, 216, 0) 0%, rgb(0, 0, 0) 100%);
+       background: rgb(3,112,38);
+     background: rgb(3,112,38);
+       background: -moz-linear-gradient(180deg, rgb(3,112,38) 0%, rgb(3,112,38) 100%);
+background: -webkit-linear-gradient(180deg, rgb(3,112,38) 0%, rgb(3,112,38) 100%);
+background: linear-gradient(180deg, rgb(3,112,38) 0%, rgb(3,112,38) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fff602",endColorstr="#2563eb",GradientType=1);
     }
 
