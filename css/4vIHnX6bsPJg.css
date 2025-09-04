@@ -21,7 +21,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
+    background-color: rgb(0, 0, 0);
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
 }
@@ -35,11 +35,11 @@ body {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #007BFF;
+    color: #FBC004;
 }
 
 .menu-button:hover {
-    color: #007BFF; /* Azul no hover */
+    color: #FBC004; /* Azul no hover */
 }
 
 .container-principal {
